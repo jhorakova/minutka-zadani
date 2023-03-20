@@ -14,27 +14,36 @@ return alarm.classList.add("alarm--ring")
 
 const zvuk = document.querySelector('#zvuk')
 
-    const spustRing = () => {
-        zvuk.play()
-    }
+const spustRing = () => {
+    zvuk.play()
+}
 
 const alarm = document.querySelector('.alarm')
 const ring = () => {
     alarm.classList.add('alarm--ring')
     spustRing()
-   
+
 }
 
 const pocetVterinMinutka = prompt('Zadej počet vteřin: ')
 
 const zvoneni = setTimeout(ring, pocetVterinMinutka)
 
-const dismissTimer = () => {
-	clearTimeout(zvoneni)
+const button = document.querySelector('.button')
+
+const cancel = () => {
+    clearTimeout(zvoneni)
+}
+button.addEventListener('click', cancel)
+
+
+
+/*původní nefungovalo const dismissTimer = () => {
+    clearTimeout(zvoneni)
 }
 const button = document.querySelector('.button')
 
 
 const tlacitkoNezvon = () => {
 button.addEventListener('click', dismissTimer)
-}
+}*/
