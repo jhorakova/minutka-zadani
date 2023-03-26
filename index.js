@@ -25,7 +25,7 @@ const ring = () => {
 
 }
 
-const pocetVterinMinutka = prompt('Zadej počet vteřin: ')
+const pocetVterinMinutka = prompt('Zadej počet vteřin: ')*1000
 
 const zvoneni = setTimeout(ring, pocetVterinMinutka)
 
